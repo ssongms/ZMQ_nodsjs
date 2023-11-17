@@ -7,7 +7,7 @@ async function main() {
   collector.bindSync("tcp://*:5558");
 
   collector.on("message", (message) => {
-    console.log(`I: publishing update ${message.toString()}`);
+    console.log("I: publishing update ", message.toString());
     publisher.send(message);
   });
 }

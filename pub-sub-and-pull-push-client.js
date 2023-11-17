@@ -10,14 +10,14 @@ async function main() {
   publisher.connect("tcp://localhost:5558");
 
   subscriber.on("message", (message) => {
-    console.log(`I: received message ${message.toString()}`);
+    console.log("I: received message ", message.toString());
   });
 
   while (true) {
     const rand = random(1, 100);
     if (rand < 10) {
       publisher.send(`"${rand}"`);
-      console.log("I: sending message", rand);
+      console.log(`I: sending message `, rand);
     }
     await sleep(100);
   }
