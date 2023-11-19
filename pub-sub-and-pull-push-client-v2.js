@@ -33,4 +33,4 @@ function sleep(ms) {
 
 // Usage: node lec-04-prg-08-pub-sub-and-pull-push-client-v2.js client_id
 const clientID = process.argv[2];
-main(clientID).catch((error) => console.error(error));
+main(clientID).catch((err) => console.error(err));
